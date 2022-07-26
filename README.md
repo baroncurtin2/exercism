@@ -4,4 +4,4 @@ Exercism exercises done in multiple languages. Done primarily to demonstrate pro
 
 ## Table of Contents
 
-- [Go](\go)
+- [Go](.\go)
