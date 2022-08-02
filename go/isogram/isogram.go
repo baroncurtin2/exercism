@@ -6,17 +6,11 @@ import (
 )
 
 func IsIsogram(word string) bool {
-	letters := make(map[string]bool)
+	s := strings.ToLower(word)
 
-	for _, char := range word {
-		if unicode.IsLetter(char) {
-			c := strings.ToLower(string(char))
-
-			if _, exists := letters[c]; exists {
-				return false
-			}
-
-			letters[c] = true
+	for i, c := range s {
+		if unicode.IsLetter(c) && strings.ContainsRune(s[i+1:], c) {
+			return false
 		}
 	}
 
