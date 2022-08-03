@@ -59,7 +59,7 @@ func buildNodes(positions []int, records []Record) *Node {
 
 		nodes[i].ID = i
 
-		if i != rootID {
+		if i != rootId {
 			p := &nodes[r.Parent]
 			p.Children = append(p.Children, &nodes[i])
 		}
@@ -67,4 +67,3 @@ func buildNodes(positions []int, records []Record) *Node {
 
 	return &nodes[0]
 }
-
