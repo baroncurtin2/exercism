@@ -1,6 +1,6 @@
 use std::collections::{HashSet, HashMap};
 
-pub fn anagrams_for<'a>(word: &str, possible_anagrams: &[&str]) -> HashSet<&'a str> {
+pub fn anagrams_for<'a>(word: &str, possible_anagrams: &[&'a str]) -> HashSet<&'a str> {
     if word.len() == 0 || possible_anagrams.len() == 0 {
         return HashSet::new();
     }
